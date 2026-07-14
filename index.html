@@ -40,8 +40,8 @@
   }
   .logo{font-family:'Fraunces',serif; font-weight:900; font-size:1.3rem; letter-spacing:1px;}
   .logo span{color:var(--accent);}
-  .nav-links{display:flex; gap:28px; font-size:0.92rem;}
-  .nav-links a{opacity:0.85; transition:opacity .2s, color .2s;}
+  .nav-links{display:flex; gap:22px; font-size:0.88rem; flex-wrap:wrap;}
+  .nav-links a{opacity:0.85; transition:opacity .2s, color .2s; white-space:nowrap;}
   .nav-links a:hover{opacity:1; color:var(--accent);}
   .nav-toggle{display:none; font-size:1.6rem; cursor:pointer; background:none; border:none; color:var(--text);}
 
@@ -123,6 +123,35 @@
     display:inline-block; font-size:0.7rem; letter-spacing:1px; text-transform:uppercase;
     color:var(--accent2); margin-bottom:10px; font-weight:600;
   }
+  .placeholder-note{
+    position:absolute; top:8px; left:8px; font-size:0.62rem; color:#fff;
+    background:rgba(0,0,0,0.55); padding:3px 8px; border-radius:6px; letter-spacing:0.5px;
+  }
+
+  .logo-card{
+    background:var(--panel); border:1px solid var(--line); border-radius:16px; overflow:hidden;
+    transition:transform .25s, border-color .25s, box-shadow .25s;
+    display:flex; flex-direction:column; height:100%;
+  }
+  .logo-card:hover{
+    transform:translateY(-6px); border-color:var(--accent); 
+    box-shadow:0 12px 32px rgba(232,163,61,0.15);
+  }
+  .logo-card-img{
+    height:240px; display:flex; align-items:center; justify-content:center; 
+    background:linear-gradient(135deg, rgba(111,174,107,0.08), rgba(232,163,61,0.08));
+    overflow:hidden; position:relative;
+  }
+  .logo-card-img img{
+    max-height:220px; max-width:200px; object-fit:contain; width:auto;
+    filter:drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+    transition:transform .3s;
+  }
+  .logo-card:hover .logo-card-img img{transform:scale(1.05);}
+  .logo-card-body{padding:24px; flex:1; display:flex; flex-direction:column;}
+  .logo-card-body h3{font-size:1.15rem; margin-bottom:8px; color:var(--accent);}
+  .logo-card-body .tag{margin-bottom:12px;}
+  .logo-card-body p{color:var(--muted); font-size:0.92rem; flex:1;}
 
   .gallery{
     columns:4 220px; column-gap:14px;
@@ -138,6 +167,13 @@
     font-size:0.98rem;
   }
   .travel-list li span:last-child{color:var(--accent); font-weight:600;}
+
+  .subhead{
+    font-family:'Fraunces',serif; font-size:1.4rem; margin:50px 0 22px;
+    display:flex; align-items:center; gap:12px;
+  }
+  .subhead:first-of-type{margin-top:0;}
+  .subhead::after{content:""; flex:1; height:1px; background:var(--line);}
 
   footer{
     padding:60px 5% 30px; border-top:1px solid var(--line); background:var(--bg-alt);
@@ -175,6 +211,9 @@
   <div class="nav-links" id="navLinks">
     <a href="#about">About</a>
     <a href="#attractions">Attractions</a>
+    <a href="#schools">Schools</a>
+    <a href="#stay-eat">Stay &amp; Eat</a>
+    <a href="#business">Business</a>
     <a href="#gallery">Gallery</a>
     <a href="#travel">Travel Info</a>
     <a href="#contact">Contact</a>
@@ -265,6 +304,180 @@
   </div>
 </section>
 
+<section id="schools">
+  <div class="section-head">
+    <div class="eyebrow">Education</div>
+    <h2>Schools of Kakarbhitta</h2>
+    <p>A growing town needs strong schools — these are the well-known institutions serving Kakarbhitta's students with quality education.</p>
+  </div>
+  <div class="card-grid">
+    <div class="logo-card">
+      <div class="logo-card-img">
+        <img src="FB_IMG_1784022173227.jpg" alt="Kakarvitta Secondary School logo" loading="lazy">
+      </div>
+      <div class="logo-card-body">
+        <span class="tag">School</span>
+        <h3>Kakarvitta Secondary School</h3>
+        <p>One of the established secondary schools in Kakarbhitta, offering quality education and serving generations of students. Located at Mechinagar-6, the school is known for its academic excellence and student development programs.</p>
+      </div>
+    </div>
+    <div class="logo-card">
+      <div class="logo-card-img">
+        <img src="FB_IMG_1784022245139.jpg" alt="Pasupati English School - School Park" loading="lazy">
+      </div>
+      <div class="logo-card-body">
+        <span class="tag">School</span>
+        <h3>Pasupati English Boarding School</h3>
+        <p>A well-regarded boarding school offering English-medium education with a focus on holistic development. The school provides excellent facilities including green spaces and modern learning environments for students.</p>
+      </div>
+    </div>
+    <div class="logo-card">
+      <div class="logo-card-img">
+        <img src="FB_IMG_1784022283475.jpg" alt="Tarapunja English School logo" loading="lazy">
+      </div>
+      <div class="logo-card-body">
+        <span class="tag">School</span>
+        <h3>Tarapunja English School</h3>
+        <p>A local English-medium school catering to families in and around Tarapunja and Kakarbhitta. Known for its academic programs and commitment to student excellence, established with a strong foundation of values and learning.</p>
+      </div>
+    </div>
+    <div class="logo-card">
+      <div class="logo-card-img">
+        <img src="FB_IMG_1784022305673.jpg" alt="Suryodya English School logo" loading="lazy">
+      </div>
+      <div class="logo-card-body">
+        <span class="tag">School</span>
+        <h3>Suryodya English School</h3>
+        <p>A well-known English-medium school serving the growing student population of Kakarbhitta. The school is committed to providing quality education focused on the pursuit of knowledge and holistic student development.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stay-eat" style="background:var(--bg-alt);">
+  <div class="section-head">
+    <div class="eyebrow">Stay, Eat &amp; Treat</div>
+    <h2>Hotels, Restaurants &amp; Bakeries</h2>
+    <p>From border-crossing travelers to weekend visitors, here's where Kakarbhitta eats, sleeps, and grabs dessert.</p>
+  </div>
+
+  <div class="subhead">Top Hotels</div>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-img">
+        <img src="https://cdn.esewahotels.com/hotels/1664268175-1328820409.jpg" alt="Taj Hotel, Kakarbhitta" loading="lazy">
+      </div>
+      <div class="card-body">
+        <span class="tag">Hotel</span>
+        <h3>Taj Hotel</h3>
+        <p>One of Kakarbhitta's popular hotel picks for travelers passing through the border town.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <span class="placeholder-note">representative image</span>
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hotel%20lobby%20interior.jpg" alt="Hotel, illustrative image" loading="lazy">
+      </div>
+      <div class="card-body">
+        <span class="tag">Hotel</span>
+        <h3>Dhaka Hotel</h3>
+        <p>A well-known lodging option for visitors and cross-border travelers in Kakarbhitta.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <span class="placeholder-note">representative image</span>
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hotel%20room.jpg" alt="Hotel, illustrative image" loading="lazy">
+      </div>
+      <div class="card-body">
+        <span class="tag">Hotel</span>
+        <h3>Paruhang Hotel</h3>
+        <p>A favored stay for guests looking for comfortable accommodation near the border.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <span class="placeholder-note">representative image</span>
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hotel%20exterior%20night.jpg" alt="Hotel, illustrative image" loading="lazy">
+      </div>
+      <div class="card-body">
+        <span class="tag">Hotel</span>
+        <h3>Hotel Grande</h3>
+        <p>One of the top-rated hotels in Kakarbhitta for travelers and business visitors alike.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="subhead">Restaurants &amp; Cafés</div>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRK-irzA1FvF3BkMwCXGlauOnscSVEi2-_HWc6947xOxxsmLbuHDaDdPGA&s=10" alt="Tea Hub, Kakarbhitta" loading="lazy">
+      </div>
+      <div class="card-body">
+        <span class="tag">Restaurant</span>
+        <h3>Tea Hub</h3>
+        <p>A popular local spot for tea and casual bites in Kakarbhitta.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr9fvz07E2k-6pssflqHV_0_FGGSY0_lW-q7qImMZx3HhApccWkUbhCWbB&s=10" alt="Fusion Restaurant, Kakarvitta" loading="lazy">
+      </div>
+      <div class="card-body">
+        <span class="tag">Restaurant</span>
+        <h3>Fusion</h3>
+        <p>Known for its mixed-cuisine menu, a favorite dining stop for locals and visitors.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy-b69j2KyIktGSgwYGBwI3_IysthVTErdSffdoiwzcg&s" alt="Ganpat Cafe, Kakarvitta" loading="lazy">
+      </div>
+      <div class="card-body">
+        <span class="tag">Cafe</span>
+        <h3>Ganpat Cafe</h3>
+        <p>A go-to café in town for coffee, snacks, and a relaxed atmosphere.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="subhead">Bakery</div>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_RkTGkDSCg8c0Bsn0AWspOyjqhHdcb6QVFTO2RZpc3Q&s=10" alt="Neha Sneha Bakery, Kakarvitta" loading="lazy">
+      </div>
+      <div class="card-body">
+        <span class="tag">Bakery</span>
+        <h3>Neha Sneha Bakery</h3>
+        <p>The town's top bakery for fresh bread, pastries, and baked treats.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="business">
+  <div class="section-head">
+    <div class="eyebrow">Local Business</div>
+    <h2>Made in Kakarbhitta</h2>
+    <p>Beyond hospitality, Kakarbhitta is home to established local businesses serving the wider Jhapa region.</p>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-img">
+        <span class="placeholder-note">representative image</span>
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Furniture%20showroom.jpg" alt="Furniture business, illustrative image" loading="lazy">
+      </div>
+      <div class="card-body">
+        <span class="tag">Furniture</span>
+        <h3>Sayapatri Furniture</h3>
+        <p>A leading furniture business in Kakarbhitta, supplying home and office furnishings to the local area.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="gallery">
   <div class="section-head">
     <div class="eyebrow">Gallery</div>
@@ -325,6 +538,9 @@
       <ul>
         <li><a href="#about">About the Town</a></li>
         <li><a href="#attractions">Attractions</a></li>
+        <li><a href="#schools">Schools</a></li>
+        <li><a href="#stay-eat">Stay &amp; Eat</a></li>
+        <li><a href="#business">Business</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#travel">Travel Info</a></li>
       </ul>
